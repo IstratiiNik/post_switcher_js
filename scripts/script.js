@@ -26,8 +26,10 @@ function createPost(title, body) {
 }
 
 left_trigger.addEventListener("click", () => {
-  post_number--;
-  loadPost();
+  if (post_number > 0) {
+    post_number--;
+    loadPost();
+  }
 });
 
 right_trigger.addEventListener("click", () => {
