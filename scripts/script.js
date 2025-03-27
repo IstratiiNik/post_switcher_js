@@ -9,3 +9,18 @@ function loadPost() {
       )
     );
 }
+
+function createPost(title, body) {
+  root.innerText = "";
+  const title_p = document.createElement("p");
+  const body_p = document.createElement("p");
+  const container = document.createElement("div");
+
+  body_p.innerText = body;
+  title_p.innerText = title;
+  container.classList.add("post");
+  title_p.classList.add("subheader");
+
+  container.append(title_p, body_p);
+  root.append(container);
+}
