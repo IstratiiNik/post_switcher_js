@@ -24,3 +24,13 @@ function createPost(title, body) {
   container.append(title_p, body_p);
   root.append(container);
 }
+
+left_trigger.addEventListener("click", () => {
+  post_number--;
+  loadPost();
+});
+
+right_trigger.addEventListener("click", () => {
+  post_number++;
+  loadPost();
+});
